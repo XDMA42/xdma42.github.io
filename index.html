@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max | Personal Homepage</title>
+  <meta name="description" content="Max — wireless positioning, Bluetooth Channel Sounding and signal processing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --card: #ffffff;
+      --text: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --accent: #2563eb;
+      --tag-bg: #eff6ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --card: #1c1917;
+        --text: #f5f5f4;
+        --muted: #a8a29e;
+        --line: #292524;
+        --accent: #60a5fa;
+        --tag-bg: #172554;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 64px 0 48px; }
+
+    /* Header */
+    header { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 44px; font-weight: 700; flex-shrink: 0;
+      object-fit: cover;
+    }
+    h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-top: 2px; }
+    .links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 500; }
+
+    /* Sections */
+    section { margin-top: 48px; }
+    h2 {
+      font-size: 1.2rem; font-weight: 600;
+      padding-bottom: 8px; margin-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    p + p { margin-top: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: var(--tag-bg); color: var(--accent);
+      padding: 4px 12px; border-radius: 999px; font-size: 0.88rem; font-weight: 500;
+    }
+    .item { margin-bottom: 18px; }
+    .item-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+    .item-title { font-weight: 600; }
+    .item-date { color: var(--muted); font-size: 0.9rem; }
+    .item-desc { color: var(--muted); font-size: 0.95rem; }
+    ul.news { list-style: none; }
+    ul.news li { margin-bottom: 8px; }
+    ul.news .date { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 10px; }
+
+    footer {
+      margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <!-- 有照片的话换成：<img class="avatar" src="photo.jpg" alt="Max"> -->
+      <div class="avatar">M</div>
+      <div>
+        <h1>Max</h1>
+        <div class="subtitle">Engineer · Wireless Positioning & Signal Processing</div>
+        <div class="links">
+          <a href="mailto:you@example.com">Email</a>
+          <a href="https://github.com/your-username">GitHub</a>
+          <a href="#">Google Scholar</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">CV (PDF)</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I work on wireless positioning for digital car key systems, with a focus on
+        <strong>Bluetooth Channel Sounding (CS)</strong> ranging. My work centers on making
+        distance estimation accurate and robust in real vehicle environments — especially
+        under <strong>non-line-of-sight (NLOS)</strong> and multipath conditions.
+      </p>
+      <p>
+        My background spans signal processing, state estimation (e.g. Kalman filtering),
+        and embedded implementation under automotive-grade constraints, within standards
+        ecosystems such as CCC Digital Key 3.0/4.0 and ICCE. I am increasingly interested in
+        applying <strong>AI / machine learning</strong> to wireless sensing problems.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <div class="tags">
+        <span class="tag">Bluetooth Channel Sounding</span>
+        <span class="tag">Wireless Ranging & Positioning</span>
+        <span class="tag">NLOS Mitigation</span>
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Kalman Filtering</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">AI for Wireless Sensing</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">2026.10</span>Launched this homepage.</li>
+        <!-- <li><span class="date">2026.xx</span>Something happened.</li> -->
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Job Title · Company Name</span>
+          <span class="item-date">20XX – Present</span>
+        </div>
+        <div class="item-desc">Digital car key positioning; Bluetooth CS ranging algorithms and NLOS error suppression.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Degree, Major · University Name</span>
+          <span class="item-date">20XX – 20XX</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="item">
+        <div class="item-title">NLOS Error Suppression for Bluetooth CS Ranging</div>
+        <div class="item-desc">A two-step Kalman filtering scheme to detect and suppress NLOS-induced ranging errors.</div>
+      </div>
+      <div class="item">
+        <div class="item-title">Project Name</div>
+        <div class="item-desc">One-line description. <a href="#">[Code]</a> <a href="#">[Paper]</a></div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Max · Last updated Oct 2026
+    </footer>
+
+  </div>
+</body>
+</html>
